@@ -1832,3 +1832,22 @@ $baseurl: '{{ site.baseurl }}/images';
 			}
 		}
 	}
+.avatar {
+  padding-top: 1%;
+}
+.img-me {
+    z-index: 100;
+    left: 0;
+    width: 175px;
+    height: 175px;
+    margin-left: 0;
+    //border: 7px solid #f1f1f1;
+    //siyah gibi olana cevirip, inceltiyorum
+    border: 3px solid #ffffff;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    //siyah gibi olana ceviriyorum
+    //background-color: #f1f1f1;
+    background-color: #ffffff;
+}
