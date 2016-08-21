@@ -9,8 +9,22 @@ layout: landing
 						<div class="inner">
 							<p/>
 							<h2>{{ site.title }}</h2>
-							<p>{{ site.description | markdownify }}</p>
+							<p><font size="1">{{ site.position }} <br/> {{ site.department }} | {{ site.university}} <br/> {{site.email}} </font></p>
+							<p><b>{{ site.description | markdownify }}</b></p>
 						</div>
+						<ul class="icons">
+					    {% for socloc in site.social %}
+					    {% if socloc[1] %}
+					    {% if socloc[0] == 'email' %}
+					    <li><a target="_blank" href="{{ socloc[1] }}" class="icon fa-envelope-o"
+					           ><span class="label">E-mail</span></a></li>
+					    {% else %}
+					    <li><a target="_blank" href="{{ socloc[1] }}" class="icon fa-{{ socloc[0] }}"
+					           ><span class="label">{{ socloc[0] }}</span></a></li>
+					    {% endif %}
+					    {% endif %}
+					    {% endfor %}
+					  </ul>
 						<a href="#one" class="more scrolly">Learn More</a>
 					</section>
 
@@ -18,10 +32,8 @@ layout: landing
 					<section id="one" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Arcu aliquet vel lobortis ata nisl<br />
-								eget augue amet aliquet nisl cep donec</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+								<h2>MY PASSION</h2>
+								<p>We live in a world where enormous data are ubiquitous. Therefore, my passion is to make sense of data by using innovative data mining and machine learning algorithms. My current interests are graph mining, latent structure mining,  very large graph data management, and bioinformatics. </p>
 							</header>
 							<ul class="icons major">
 								<li><span class="icon fa-diamond major style1"><span class="label">Lorem</span></span></li>
@@ -35,23 +47,48 @@ layout: landing
 					<section id="two" class="wrapper alt style2">
 						<section class="spotlight">
 							<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
-								<h2>Magna primis lobortis<br />
-								sed ullamcorper</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+								<h2>EDUCATION</h2>
+								<p style="line-height:4px" align="left"><b>Ph.D.</b>, <i>Computer Science (Dr. rer. nat)</i>, <b>1998</b>, <b><a href="http://www.en.uni-muenchen.de/index.html" target="_blank">Ludwig-Maximilians-Universität (LMU)</a></b></p>
+								<p style="line-height:4px" align="left"><b>M.S.</b>, <i>Computer Science</i>, <b>1987</b>, <b><a href="http://www.sict.ac.cn/" target="_blank">Shenyang Inst. of Comp. Tech.</a></b>, <b><a href="http://english.cas.cn/" target="_blank">Chinese Acad. of Sci.</a></b></p>
+								<p style="line-height:4px" align="left"><b>B.S.</b>, <i>Mathematics</i>, <b>1983</b>, <b><a href="http://www.nankai.edu.cn/" target="_blank">Nankai University</a></b></p>
 							</div>
 						</section>
 						<section class="spotlight">
 							<div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
-								<h2>Tortor dolore feugiat<br />
-								elementum magna</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+								<h2>AWARDS</h2>
+								<p align="left"><b>2014 SIGKDD Test of Time </b> award for my work on the paper <b><i>“A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise” [KDD 1996].</i></b> <i>“The SIGKDD Test of Time award recognizes outstanding papers from past KDD Conferences beyond the last decade that have had an important impact on the data mining research community.”</i> <a href="http://www.kdd.org/blog/2014-sigkdd-test-time-award" target="_blank"><u>Click here to read the full article</u></a></p>
+								<p align="left">Selected as an <a href="http://orise.orau.gov/science-education/research-experiences/faculty/default.aspx" target="_blank"><b>ORISE Faculty Research Program</b></a> member in <a href="http://www.fda.gov/AboutFDA/CentersOffices/NCTR/default.htm" target="_blank"><b>the National Center for Toxicological Research (NCTR).</b></a></p>
 							</div>
 						</section>
 						<section class="spotlight">
 							<div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
-								<h2>Augue eleifend aliquet<br />
-								sed condimentum</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+								<h2>ACHIEVEMENTS</h2>
+								<p align="left"><b>SCAN</b>, a clustering algorithm for large graphs such as social and biological networks has received over <b>400</b> citations since published in <b>ACM SIGKDD’07</b> according to <a href="http://scholar.google.com/citations?view_op=view_citation&hl=en&user=7McohLsAAAAJ&citation_for_view=7McohLsAAAAJ:IjCSPb-OGe4C" target="_blank"><i>Google scholar</i></a>. <b>SCAN</b> is also used by <b>FDA</b> for <a href="http://www.fda.gov/ScienceResearch/BioinformaticsTools/ucm285284.htm" target="_blank"><i> atBioNet - an Integrated Network Analysis Tool for Knowledge Expansion, Network Modeling and Visualization in Genomics and Proteomics </i></a>.</p>
+								<p align="left"><b>DBSCAN</b>, a density-based clustering algorithms has received over <b>8,000</b> citations according to <a href="http://scholar.google.com/citations?view_op=view_citation&hl=en&user=7McohLsAAAAJ&citation_for_view=7McohLsAAAAJ:IjCSPb-OGe4C" target="_blank"><i>Google scholar</i></a>. <b>DBSCAN</b> is implemented in some most popular data mining and machine learning software including <a href="http://www.cs.waikato.ac.nz/ml/weka/index.html" target="_blank"><i>Weka</i></a> and <a href="http://rapid-i.com/content/view/181/190/" target="_blank"><i>RapidMiner.</i></a>. Here is the link to a <a href="http://en.wikipedia.org/wiki/DBSCAN" target="_blank"><i>Wikipedia article</i></a> about <b>DBSCAN</b> algorithm.</p>
+								<p align="left">Both <b>SCAN</b> and <b>DBSCAN</b> algorithms are covered by many data mining textbooks.</p>
+								<p align="left">You may find my publications from <a href="http://scholar.google.com/citations?user=7McohLsAAAAJ&hl=en" target="_blank"><i>Google scholar</i></a> and <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xu:Xiaowei.html" target="_blank"><i>DBLP.</i></a></p>
+								<p align="left"><a href="http://www.kdd.org/kdd2015/" target="_blank"><b>KDD‘2015</b></a> : Program Committee. </p>
+							</div>
+						</section>
+						<section class="spotlight">
+							<div class="image"><img src="images/pic07.jpg" alt="" /></div><div class="content">
+								<h2>RESEARCH STUDENTS</h2>
+								<h4><u> Current Students and Visiting Scholars </u></h4>
+								<p style="line-height:4px" align="left"><a href="http://tolga-han.com/" target"_blank"><b>Tolgahan Cakaloglu</b></a>, <i>(Ph.D Student)</i></p>
+								<p style="line-height:4px" align="left"><b>Ming-Hua Chung</b>, <i>(Ph.D Student)</i></p>
+								<p style="line-height:4px" align="left"><b>Gang Chen</b>, <i>(Ph.D Student)</i></p>
+								<p style="line-height:4px" align="left"><b>Jie Liu</b>, <i>(Ph.D Student)</i></p>
+								<p style="line-height:4px" align="left"><b>Stephen Wallace</b>, <i>(Ph.D Student)</i></p>
+								<p style="line-height:4px" align="left"><b>Hailin Tang</b>, <i>(Ph.D Student)</i></p>
+								<p style="line-height:4px" align="left"><b>Dr. Yong Feng</b>, <i>(Visiting Scholar, <a href="http://wwwen.lnu.edu.cn/" target="_blank">Liaoning University, China</a>)</i></p>
+								<h4><u> Former Students and Visiting Scholars </u></h4>
+								<p style="line-height:4px" align="left"><a href="http://faculty.tamuc.edu/mmete/" target"_blank"><b>Dr. Mutlu Mete</b></a>, <i>(Texas A&amp;M University-Commerce)</i></p>
+								<p style="line-height:4px" align="left"><b>Dr. Nurcan Yuruk</b>, (<a href="http://www.utdallas.edu/" target="_blank"><i>UT Dallas</i></a>)</p>
+								<p style="line-height:4px" align="left"><a href="http://uwf.edu/dsnider/" target"_blank"><b>Dr. Dallas Snider</b></a>, <i>(University of West Florida)</i></p>
+								<p style="line-height:4px" align="left"><b>Dr. Halil Bisgin</b>, (<a href="http://www.fda.gov/AboutFDA/CentersOffices/OC/OfficeofScientificandMedicalPrograms/NCTR/" target="_blank"><i>FDA/NCTR</i></a>)</p>
+								<p style="line-height:4px" align="left"><b>Dr. Venkata Swamy Martha</b>, (<a href="http://www.walmartlabs.com/" target="_blank"><i>WalmartLabs</i></a>)</p>
+								<p style="line-height:4px" align="left"><b>Dr. Weizhong Zhao</b>, (<a href="http://www.fda.gov/AboutFDA/CentersOffices/OC/OfficeofScientificandMedicalPrograms/NCTR/" target="_blank"><i>FDA/NCTR</i></a>)</p>
+								<p style="line-height:4px" align="left"><b>Dr. Dongming Chen</b>, (<a href="http://www.neu.edu.cn/version2006/files/english_index.htm" target="_blank"><i>Northeastern University, China</i></a>)</p>
 							</div>
 						</section>
 					</section>
@@ -60,41 +97,15 @@ layout: landing
 					<section id="three" class="wrapper style3 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Accumsan mus tortor nunc aliquet</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+								<h2>OTHER ACTIVITIES</h2>
+								<p style="line-height:4px" align="left">I’m a proud member of <a href="http://www.lrccc.org/" target="_blank">Little Rock Chinese Christian Church.</a></p>
+								<p style="line-height:4px" align="left">I am a marathon runner and have finished five marathons with a <b>PR 3:45:23.</b></p>
 							</header>
-							<ul class="features">
-								<li class="icon fa-paper-plane-o">
-									<h3>Arcu accumsan</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-laptop">
-									<h3>Ac Augue Eget</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-code">
-									<h3>Mus Scelerisque</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-headphones">
-									<h3>Mauris Imperdiet</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-heart-o">
-									<h3>Aenean Primis</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-flag-o">
-									<h3>Tortor Ut</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-							</ul>
 						</div>
 					</section>
 
 				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
+					<!-- <section id="cta" class="wrapper style4">
 						<div class="inner">
 							<header>
 								<h2>Arcue ut vel commodo</h2>
@@ -105,4 +116,4 @@ layout: landing
 								<li><a href="#" class="button fit">Learn More</a></li>
 							</ul>
 						</div>
-					</section>
+					</section> -->
